@@ -2,9 +2,14 @@ import './reset.scss';
 import './global.scss';
 import './App.scss';
 import bg from './Images/background.jpg';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 </style>
+
+const arrowIconStyle = { 
+  color: "white", fontSize: "1.8rem", margin: "0 10px", cursor: "pointer"
+}
 
 function App() {
   return (
@@ -28,7 +33,7 @@ function App() {
             </div>
           </div>
 
-          <h1 className='title'>Tour around the world</h1>
+          <h1 className='title pt-20'>Tour around the world</h1>
           <h2 className='title'>with the new destination</h2>
 
           <div className='description-area'>
@@ -42,7 +47,27 @@ function App() {
           </div>
         </section>
 
-        <section className='explore'></section>
+        <section className='explore'>
+          <div className='header-explore'>
+            <div className='title-explore-area'>
+              <h3 className='title-explore'>Explore place around the world</h3>
+            </div>
+            <div className='arrow-explore-area'>
+              <div className='arrow-explore'>
+                
+                <FaLongArrowAltLeft style={arrowIconStyle} />
+                <FaLongArrowAltRight style={arrowIconStyle} />
+              </div>
+            </div>
+          </div>
+          <div className='cards-explore-area'>
+            <div className='card'></div>
+            <div className='card'></div>
+            <div className='card'></div>
+            <div className='card'></div>
+            <div className='invisible-card'></div>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -4,10 +4,11 @@ $accent-color: rgba(255, 86, 8, 0.911);
 .home {
   height: 100vh;
   width: 100%;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
   color: $text-color;
   position: relative;
   display: none;
+  padding-top: 20px;
 
   @media screen and (min-width: 1024px) {
     display: block;
@@ -18,7 +19,6 @@ $accent-color: rgba(255, 86, 8, 0.911);
     width: 100%;
     display: grid;
     grid-template-areas: "logo routes login";
-    margin-bottom: 2%;
 
     .logo-area {
       grid-area: "logo";
@@ -56,19 +56,20 @@ $accent-color: rgba(255, 86, 8, 0.911);
         grid-area: "login";
         
         .login {
-            background-color: lighten($text-color, 15%);
+            background-color: lighten($text-color, 5%);
             padding: 12px 25px;
             cursor: pointer;
             border: none;
             color: #fff;
             text-transform: uppercase;
+            opacity: 0.5;
             overflow: hidden;
             transition: all 200ms ease;
             border-radius: 3px;
 
             &:hover {
-                background-color: rgba(51, 51, 51, 0.432);
-                box-shadow: 0 0 6px rgba(105, 105, 105, 0.432);
+                background-color: darken($text-color, 15%);
+                box-shadow: 0 0 2px darken($text-color, 15%);
             }
         }
     }
@@ -130,6 +131,74 @@ $accent-color: rgba(255, 86, 8, 0.911);
 }
 
 .explore {
-  height: 540px;
+  height: 660px;
   width: 100%;
+  padding-top: 50px;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+
+  .header-explore {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 10px;
+
+    .title-explore-area {
+      width: 50%;
+      height: 100%;
+
+      .title-explore {
+        width: 70%;
+        color: lighten($text-color, 60%);
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .arrow-explore-area {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .arrow-explore {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .cards-explore-area {
+    width: 112%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    .card {
+      height: 90%;
+      min-width: 320px;
+      margin: 10px;
+      background-color: $text-color;
+    }
+
+    .invisible-card { 
+      height: 90%;
+      min-width: 100px;
+      margin: 10px;
+      background-color: transparent;
+    }
+  }
 }

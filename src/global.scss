@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
     width: 5px; 
+    height: 0px;
 }
   
 ::-webkit-scrollbar-thumb {
@@ -28,5 +29,9 @@ body{
     height: auto;
     width: 100%;
     padding: 0 10% 0 10%;
+}
+
+.pt-20 {
+    padding-top: 20px;
 }
 
